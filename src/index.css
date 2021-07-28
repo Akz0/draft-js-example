@@ -11,6 +11,9 @@ body {
 	font-family: "Open Sans", sans-serif;
 	margin: 0;
     font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .font-input, button {
@@ -50,6 +53,7 @@ button:focus {
 }
 
 .App{
+    width: 800px;
     height: 70vh;
     display: flex;
     flex-direction: column;
@@ -62,6 +66,7 @@ button:focus {
     width: fit-content;
     border: 1px solid red;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
 }
@@ -79,10 +84,11 @@ button:focus {
     font-size: 16px;
     margin:5px 5px 5px 5px;
 }
-.RichEditor-root {
-	background: rgb(145, 67, 67);
-	border: 1px solid #ddd;
-	font-family: "Georgia", serif;
-	font-size: 14px;
-	padding: 15px;
+
+@media screen and (max-width:770px){
+    
+    /* Text Editor */
+    .App {
+        width: 100%;
+    }
 }

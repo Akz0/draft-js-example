@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { Editor, EditorState, RichUtils } from 'draft-js'
 import 'draft-js/dist/Draft.css'
 import './Editor.css'
-import { not } from 'expect';
 import { isNumber } from 'lodash';
 
 const EditorStyle = {
@@ -11,7 +10,7 @@ const EditorStyle = {
     flexDirection: 'column',
     justifyContent: 'flex-start',
     alignItems: 'center',
-    width: '800px',
+    width: '100%',
     minHeight: '300px',
     cursor: 'text',
 }
@@ -29,12 +28,12 @@ const CustomStyleMap = {
 }
 const App = props => {
 
-    const value = `And don’t hesitate to ask candid questions on a first date. In today’s dating world, it’s tempting to try and play it cool by avoiding questions about whether someone’s looking for a legit relationship or just a casual fling. You don’t want to scare them off, right? Or be too serious, no? But if what you really want is a long-term relationship or more, then you want to know up front. Someone whose desires align with yours won’t run away scared. And good riddance to those who do: You didn’t waste your time or risk breaking your heart.`
+    // const value = `And don’t hesitate to ask candid questions on a first date. In today’s dating world, it’s tempting to try and play it cool by avoiding questions about whether someone’s looking for a legit relationship or just a casual fling. You don’t want to scare them off, right? Or be too serious, no? But if what you really want is a long-term relationship or more, then you want to know up front. Someone whose desires align with yours won’t run away scared. And good riddance to those who do: You didn’t waste your time or risk breaking your heart.`
 
     const [message, setMessage] = useState('')
     const [strikethrough, setStrikeThrough] = useState(false)
     const [align, setAlign] = useState('left')
-    const [fontSize, setFontSize] = useState(14)
+    // const [fontSize, setFontSize] = useState(14)
     const [editorState, setEditorState] = useState(() => EditorState.createEmpty())
     const [stylingButtons, setStylingButton] = useState({
         bold: false,

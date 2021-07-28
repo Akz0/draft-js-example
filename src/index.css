@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap");
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html,
+body {
+	font-family: "Open Sans", sans-serif;
+	margin: 0;
+    font-size: 12px;
+}
+
+.font-input, button {
+	font: inherit;
+	background: white;
+	padding: 5px 15px;
+	color: #ff2058;
+	border: 1px solid #ff2058;
+	margin: 0.5rem 0.5rem;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.font-input{
+    width:100px;
+}
+.font-input:active,
+.font-input:hover{
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.26);
+    cursor:text
+}
+.font-input:focus {
+	outline: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.26);
+}
+.active{
+    background: #ff2058;
+    color:white;
+	border: 1px solid #ff2058;
+}
+button:hover,
+button:active {
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.26);
+}
+
+button:focus {
+	outline: none;
+}
+
+.App{
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+/* Buttons of Styling */
+
+.style-actions{
+    width: fit-content;
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.bold{
+    font-weight: bolder;
+}
+.italic{
+    font-style: italic;
+}
+/* Text Editor */
+.DraftEditor-root {
+    width:100%;
+	border: 1px solid #ff2058;
+    padding: 10px;
+    font-size: 16px;
+    margin:5px 5px 5px 5px;
+}
+.RichEditor-root {
+	background: rgb(145, 67, 67);
+	border: 1px solid #ddd;
+	font-family: "Georgia", serif;
+	font-size: 14px;
+	padding: 15px;
+}
